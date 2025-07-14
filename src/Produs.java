@@ -1,4 +1,4 @@
-public abstract class Produs {
+public class Produs {
     private String cod;
     private String nume;
     private double pret;
@@ -15,14 +15,35 @@ public abstract class Produs {
         this.distribuitor = distribuitor;
     }
 
-    public String getCod() { return cod; }
-    public String getNume() { return nume; }
-    public double getPret() { return pret; }
-    public int getStoc() { return stoc.getCantitate(); }
-    public void setStoc(int cantitate) { this.stoc.setCantitate(cantitate); }
-    public Categorie getCategorie() { return categorie; }
-    public Distribuitor getDistribuitor() { return distribuitor; }
+    public String getCod() {
+        return cod;
+    }
 
+    public String getNume() {
+        return nume;
+    }
+
+    public double getPret() {
+        return pret;
+    }
+
+    public int getStoc() {
+        return stoc.getCantitate();
+    }
+
+    public void setStoc(int cantitate) {
+        this.stoc.setCantitate(cantitate);
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public Distribuitor getDistribuitor() {
+        return distribuitor;
+    }
+
+    @Override
     public String toString() {
         return cod + ": " + nume + " (" + pret + " RON, stoc: " + getStoc() + ")";
     }
